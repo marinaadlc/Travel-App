@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Your travel Plan App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Your travel</h1>
+    </header>
+    <main>
+      <form class="travelForm" onsubmit="return Client.storeInfo(event)">
+        <div class="formBox">
+          <label for="Destination ">Enter your destination<br/></label>
+          <input id="destination"type="text" name="Destination" value="">
+        </div>
+        <div class="formBox">
+          <label for="">Enter your dates<br/></label>
+          <div class="datesBox">
+            <div class="dates">
+              <label for="departure">Departure<br/></label>
+              <input id="departure"type="date" name="departureDate" value="">
+            </div>
+            <div class="dates">
+              <label for="return">Return<br/></label>
+              <input id="return"type="date" name="returnDate" value="">
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <input class="button"type="submit" value="Check Travel!" onclick="return Client.storeInfo(event)" onsubmit="return Client.storeInfo(event)">
+        </div>
+      </form>
+      <div class="travelInfoBox hidden">
+        <div class="infoBox">
+          <h2>Your destination:</h2>
+          <div class="destinationImg"></div>
+        </div>
+        <div class="infoBox">
+          <div class="dateInfoBox">
+            <div class="dateDay">24-05-2020</div>
+            <div class="dateTemp">Cold</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

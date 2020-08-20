@@ -1,0 +1,99 @@
+body{
+  margin:0;
+}
+
+h1{
+  text-align: center;
+}
+
+  label{
+    font-weight: bold;
+    font-size: 20px;
+  }
+  input{
+    border: solid 2px;
+    border-radius: 20px;
+    margin-top:10px;
+    padding:10px;
+    width:50vw;
+    min-width: 200px;
+  }
+
+  .hidden{
+    display:none !important;
+  }
+
+.travelForm{
+  background-color: #ffe3e6;
+  border-radius: 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  height:80vh;
+  text-align: center;
+}
+  .formBox{
+    margin:10px;
+  }
+    .datesBox{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+      .dates input{
+        margin: 10px;
+        width:25vw;
+      }
+    .button{
+      background-color: black;
+      color:white;
+    }
+    .button:hover{
+      background-color: grey;
+    }
+
+    /* //------------------ */
+    .travelInfoBox{
+      background-color: #FFC58F;
+      display:flex;
+      flex-wrap: flex;
+      height:80vh;
+    }
+      .infoBox{
+        display:flex;
+        flex-flow: wrap;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        width:50%;
+      }
+        .destinationImg{
+          min-width:250px;
+          min-height:175px;
+          width:35vw;
+          height:25vw;
+          background:grey;
+        }
+
+        .dateInfoBox{
+          display:flex;
+          flex-flow: wrap;
+
+        }
+          .dateDay{
+            border: solid 2px;
+            border-radius: 20px;
+            background-color: white;
+            padding:3px;
+            flex:1;
+            text-align: center;
+            min-width: 150px;
+            margin:5px 0;
+          }
+            .dateTemp{
+              flex:2;
+              text-align:center;
+                margin:5px 0;
+            }
