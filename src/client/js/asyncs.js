@@ -59,6 +59,7 @@ async function getAll(travelInfo){
   console.log(coords.lng+coords.lat);
 
   // get temp with WeatherbitKey
+
 }
 
 export{
