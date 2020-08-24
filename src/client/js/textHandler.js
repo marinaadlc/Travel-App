@@ -13,13 +13,12 @@ async function storeInfo(event){
   } else{
     // check dates
     const currentDate = new Date();
-    travelInfo.departure = new Date(travelInfo.departure);
-    travelInfo.return = new Date(travelInfo.return);
+    const dep = new Date(travelInfo.departure);
+    const ret = new Date(travelInfo.return);
     console.log(travelInfo);
-    if(currentDate>travelInfo.departure || travelInfo.departure>travelInfo.return){
+    if(currentDate>dep || dep>ret){
       alert("Check Dates!");
     } else{
-      console.log(travelInfo);
       const sendText = await Client.getAll(travelInfo);
     }
   }
