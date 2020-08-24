@@ -56,7 +56,7 @@ h1{
 
     /* //------------------ */
     .travelInfoBox{
-      background-color: #FFC58F;
+      background-color: #ffe3e6;
       display:flex;
       flex-wrap: flex;
       height:80vh;
@@ -75,6 +75,7 @@ h1{
           width:35vw;
           height:25vw;
           background:grey;
+          background-size: cover;
         }
 
         .dateInfoBox{

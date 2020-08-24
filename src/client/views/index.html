@@ -9,7 +9,7 @@
       <h1>Your travel</h1>
     </header>
     <main>
-      <form class="travelForm" onsubmit="return Client.storeInfo(event)">
+      <form id="travelForm"class="travelForm" onsubmit="return Client.storeInfo(event)">
         <div class="formBox">
           <label for="Destination ">Enter your destination city<br/></label>
           <input id="destination"type="text" name="Destination" value="">
@@ -31,15 +31,13 @@
           <input class="button"type="submit" value="Check Travel!" onclick="return Client.storeInfo(event)" onsubmit="return Client.storeInfo(event)">
         </div>
       </form>
-      <div class="travelInfoBox hidden">
+      <div id="travelInfoBox"class="travelInfoBox hidden">
         <div class="infoBox">
-          <h2>Your destination:</h2>
-          <div class="destinationImg"></div>
+          <h2 id="destinationTitle">Your destination: </h2>
+          <div id="destinationImg"class="destinationImg"></div>
         </div>
         <div class="infoBox">
-          <div class="dateInfoBox">
-            <div class="dateDay">24-05-2020</div>
-            <div class="dateTemp">Cold</div>
+          <div id="dateInfoBox" class="dateInfoBox">
           </div>
         </div>
       </div>

@@ -11,11 +11,6 @@ import {getApi} from './js/asyncs'
 import {getAll} from './js/asyncs'
 import {storeInfo} from './js/textHandler'
 
-// Weatherbit API credentials
-const weatherbitKey = process.env.WEATHERBIT_KEY;
-
-
-
 export{
   postData,
   getData,
