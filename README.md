@@ -1,7 +1,7 @@
 # Text Analyser App Project
 
 ## Overview
-This app uses the MeaningCloud API to analyse the user's text and identify its language.
+This app allows the user to add the details of a new travel and get the temperature they will have during the stay.
 
 ## Instructions
-To use it, insert the text to analyse on the input form in the page and click analyse. 
+Add a city and the dates for the journey to get the info.
