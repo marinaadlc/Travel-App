@@ -39,18 +39,44 @@ async function getLang(url=''){
   }
 }
 
+// async ask weather
+async function askWeather(travelInfo){
+  // 1. Get dates temperature, for it:
+        // while loop to go through dates up to return date(included)
+            // if statement to see if it is +7days after current date, to chose API
+  let loop = new Date(info.departure);
+  let end = new Date (info.return);
+  const currentDate = new Date();
+  let hours;
+  let days;
+  while(loop<=end){
+    hours = loop.getTime()-currentDate.getTime();
+    days = hours/(1000*3600*24);
+    if(days<=5){
+      // call weather API
+
+      const weather = await getWeather(url);
+
+    }else{
+      // call Geo API
+      // call Weather new API
+    }
+    loop.setDate(loop.getDate()+1);
+  }
+}
+
 // async, get all Data and Display
-async function getAll(travelInfo,dates){
-  // send Dates to Server
-  const sendDates = await Client.postData("/addDates",dates);
+async function getAll(travelInfo){
   // send Travel Info to server
   const sendInput = await Client.postData("/addInfo", travelInfo);
-
+  // get temps from API
+  const getWeatherInfo = await Client.askWeather(travelInfo);
 }
 
 export{
   postData,
   getData,
   getLang,
-  getAll
+  getAll,
+  askWeather
 }

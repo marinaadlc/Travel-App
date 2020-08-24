@@ -7,21 +7,24 @@ async function storeInfo(event){
   travelInfo["departure"]=document.getElementById('departure').value;
   travelInfo["return"]=document.getElementById('return').value;
 
-  // date check
-  const dates = {};
-  dates["currentDate"] = new Date();
-  dates["departureDate"] = new Date(travelInfo.departure);
-  dates["returnDate"] = new Date(travelInfo.return);
-  console.log(dates);
+  // check text entered
   if(travelInfo.destination.length == 0 || travelInfo.departure.length == 0 || travelInfo.return.length == 0){
     alert("Text missing :(");
-  } else if(dates.currentDate>dates.departureDate || dates.departureDate>dates.returnDate){
-    alert("Check Dates!");
-  }else{
+  } else{
+    // check dates
+    const currentDate = new Date();
+    travelInfo.departure = new Date(travelInfo.departure);
+    travelInfo.return = new Date(travelInfo.return);
+    console.log(travelInfo);
+    if(currentDate>travelInfo.departure || travelInfo.departure>travelInfo.return){
+      alert("Check Dates!");
+    } else{
       console.log(travelInfo);
-      const sendText = await Client.getAll(travelInfo,dates);
+      const sendText = await Client.getAll(travelInfo);
+    }
   }
 }
+
 
 export{
   storeInfo
