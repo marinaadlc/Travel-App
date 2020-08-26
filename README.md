@@ -11,6 +11,7 @@ Add a city and the dates for the journey to get the info.
 ##How to run the projects in different modes
 To run the project in production mode use -npm run build-prod in the command line.
 To run the project in development mode use -npm run build-dev in the command line.
+To run the project in test mode use -npm run test in the command line, this mode uses Jest to try the functionalities of several functions.
 
 ##Important files
 All 'public' files are inside the 'src' folder. Inside it, the client side code is inside the 'Client' folder, arraged inside folders according to the code type.

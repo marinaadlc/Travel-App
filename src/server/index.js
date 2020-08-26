@@ -27,9 +27,10 @@ app.get('/', function (req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(3030, function () {
+app.listen(3030,startServer);
+function startServer() {
     console.log("Server running on port 3030")
-})
+}
 
 let info = {};
 
@@ -52,3 +53,5 @@ async function getWeather(url=''){
     console.log("error",error);
   }
 }
+
+export{startServer}
