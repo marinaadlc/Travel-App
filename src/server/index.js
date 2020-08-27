@@ -53,5 +53,3 @@ async function getWeather(url=''){
     console.log("error",error);
   }
 }
-
-export{startServer}

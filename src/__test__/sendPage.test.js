@@ -3,9 +3,9 @@ const supertest = require('supertest');
 const request = supertest(app);
 
 
-describe('Endpoint test', () => {
-  it('/test', async (done) => {
-    const response = await request.get('/test');
+describe('Try request to get page', () => {
+  it('Get request to /', async (done) => {
+    const response = await request.get('/');
     expect(response.status).toBe(200);
     done();
   });
