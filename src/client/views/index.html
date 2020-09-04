@@ -2,35 +2,33 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Your travel Plan App</title>
+    <title>Bravo App</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h1>Your travel</h1>
-    </header>
     <main>
-      <form id="travelForm"class="travelForm" onsubmit="return Client.storeInfo(event)">
-        <div class="formBox">
-          <label for="Destination ">Enter your destination city<br/></label>
-          <input id="destination"type="text" name="Destination" value="">
-        </div>
-        <div class="formBox">
-          <label for="">Enter your dates<br/></label>
-          <div class="datesBox">
-            <div class="dates">
+      <div class="bg-container">
+        <section class="general-container">
+          <h1 id="main-title">Bravo</h1>
+          <h2 >Plan your travel.</h2>
+          <form id="travelForm"class="travelForm" onsubmit="return Client.storeInfo(event)">
+            <div id="dest">
+              <label for="Destination ">Where<br/></label>
+              <input class="inputs" id="destination" type="text" name="Destination" placeholder="City" required>
+            </div>
+            <div id="dep">
               <label for="departure">Departure<br/></label>
-              <input id="departure"type="date" name="departureDate" value="">
+              <input class="inputs" id="departure"type="date" name="departureDate"required>
             </div>
-            <div class="dates">
+            <div id="ret">
               <label for="return">Return<br/></label>
-              <input id="return"type="date" name="returnDate" value="">
+              <input class="inputs" id="return"type="date" name="returnDate" required>
             </div>
-          </div>
-        </div>
-        <div class="">
-          <input class="button"type="submit" value="Check Travel!" onclick="return Client.storeInfo(event)" onsubmit="return Client.storeInfo(event)">
-        </div>
-      </form>
+            <input class="inputs" id="search-button"type="submit" value="SEARCH" onclick="return Client.storeInfo(event)" onsubmit="return Client.storeInfo(event)">
+          </form>
+        </section>
+      </div>
       <div id="travelInfoBox"class="travelInfoBox hidden">
         <div class="infoBox">
           <h2 id="destinationTitle">Your destination: </h2>

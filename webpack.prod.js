@@ -23,7 +23,11 @@ module.exports={
       {
         test: /\.scss$/,
         use: [ MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader']
-      }
+      },
+      {
+           test: /\.jpg$/,
+           loader: "file-loader"
+       }
     ]
   },
   optimization: {

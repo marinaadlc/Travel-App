@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bravo App</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles/index2.css">
+  </head>
+  <body>
+    <div class="bg-container">
+      <section class="general-container">
+        <h1 id="main-title">Bravo</h1>
+        <h2 >Plan your travel.</h2>
+        <form id="travelForm"class="travelForm" onsubmit="return Client.storeInfo(event)">
+          <div id="destination">
+            <label for="Destination ">Where<br/></label>
+            <input class="inputs" id="destination"type="text" name="Destination" placeholder="City">
+          </div>
+          <div id="departure">
+            <label for="departure">Departure<br/></label>
+            <input class="inputs" id="departure"type="date" name="departureDate" placeholder="date">
+          </div>
+          <div id="return">
+            <label for="return">Return<br/></label>
+            <input class="inputs" id="return"type="date" name="returnDate" placeholder="date">
+          </div>
+          <input class="inputs" id="search-button"type="submit" value="SEARCH" onclick="return Client.storeInfo(event)" onsubmit="return Client.storeInfo(event)">
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
