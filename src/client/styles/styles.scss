@@ -43,31 +43,32 @@ h2{
       }
         #travelForm div{
           background-color: white;
-          border:0;
-          box-sizing: 0;
           display: inline-flex;
-          align-items: left;
-          flex:1;
           flex-direction: column;
           justify-content: center;
           opacity: 0.6;
-          padding:10px 10px 0 10px;
+          padding:10px 20px 0 20px;
+        }
+        #dest{
+          flex:0.7;
+        }
+        #dep{
+          flex:1;
+          }
+        #ret{
+          flex:1;
         }
         #search-button{
-          background-color:#00A271;
-          color:white;
-          display: flex;
-          flex:1;
-          font-weight: bold;
-          height:100%;
-          justify-content: center;
-          font-size: 1.1em;
-          margin:0;
-          width:100%;
-        }
-          #departure{
-            border-left: 1px solid white;
-            border-right: 1px solid white;
+            background-color:#00A271;
+            color:white;
+            display: flex;
+            flex:1;
+            font-weight: bold;
+            height:100%;
+            justify-content: center;
+            font-size: 1.1em;
+            margin:0;
+            width:100%;
           }
           #search-button:hover{
             background-color:#67a391;
@@ -79,6 +80,7 @@ h2{
           }
           .inputs{
             border: 0;
+            box-sizing: border-box;
             color: #5B5B5B;
             flex:1;
             font-weight: bold;
@@ -86,6 +88,50 @@ h2{
           }
 
     /* //------------------ */
+    #bg-container2{
+      height: 100vh;
+      padding:0;
+      background-size: cover;
+      background-color:rgba(36,36,36, 0.7);
+      background-blend-mode: multiply;
+    }
+      .general-container2{
+        display:flex;
+        flex-direction: column;
+        height:100vh;
+        justify-content: center;
+        margin:0 10vw;
+      }
+        #weathers-container{
+          display: flex;
+          flex-wrap:wrap;
+          justify-content: center;
+          margin-top: 10vh;
+        }
+          .tempBox{
+            background-color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            height:150px;
+            justify-content: center;
+            margin:5px;
+            padding: 5px;
+            text-align: center;
+            width:100px;
+          }
+            .dateDay{
+              color:#242424;
+              margin-bottom: 15px;
+            }
+            .dateTemp{
+              color:#242424;
+              font-size: 2rem;
+              }
+
+
+
+      /* //------------------ */
     .travelInfoBox{
       background-color: #ffe3e6;
       display:flex;
@@ -114,18 +160,3 @@ h2{
           flex-flow: wrap;
 
         }
-          .dateDay{
-            border: solid 2px;
-            border-radius: 20px;
-            background-color: white;
-            padding:3px;
-            flex:1;
-            text-align: center;
-            min-width: 150px;
-            margin:5px 0;
-          }
-            .dateTemp{
-              flex:2;
-              text-align:center;
-                margin:5px 0;
-            }

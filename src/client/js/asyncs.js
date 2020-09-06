@@ -70,29 +70,39 @@ async function getAll(travelInfo){
   const wInitUrl = 'https://api.weatherbit.io/v2.0/forecast/daily?lat=';
   const wUrl = wInitUrl+coords.lat+"&lon="+coords.lng+"&key="+wKey;
   const getTemps = await getApi(wUrl);
+  let num = 1;
   while(loop<=end){
     // format Date
     let beautyDate = loop.getDate()+ "-" + (loop.getMonth() + 1) + "-" + loop.getFullYear();
     // create element with date and temp
+    let idName = "tempBox"+num;
+      // create white box
+    var addBox = document.createElement("div");
+    addBox.setAttribute("id", idName);
+    addBox.classList.add("tempBox");
+    document.getElementById("weathers-container").appendChild(addBox);
+      // add date
     var addDate = document.createElement("div");
     addDate.classList.add("dateDay");
     addDate.innerText = beautyDate;
-    document.getElementById("dateInfoBox").appendChild(addDate);
+    document.getElementById(idName).appendChild(addDate);
+      // add temp
     var addTemp = document.createElement("div");
     addTemp.classList.add("dateTemp");
-    addTemp.innerText = "Temp:"+getTemps.data[loopDay].temp;
-    document.getElementById("dateInfoBox").appendChild(addTemp);
+    addTemp.innerText = getTemps.data[loopDay].temp+"°C";
+    document.getElementById(idName).appendChild(addTemp);
     // continue loop
     var newDate = loop.setDate(loop.getDate() + 1);
     loop = new Date(newDate);
      loopDay=loopDay+1;
+     num=num+1;
   }
   // add PixaBay image
   const pInitUrl = 'https://pixabay.com/api/?key=';
   const pKey = "18027537-26bba2721a71594e77ca7f488";
-  let pUrl = pInitUrl+pKey+"&q="+travelInfo.destination+"&city&image_type=photo";
+  let pUrl = pInitUrl+pKey+"&q="+travelInfo.destination+"&city&image_type=photo&min_width=800";
   const imgApi = await getApi(pUrl);
-  document.getElementById("destinationImg").style.backgroundImage = "url('"+imgApi.hits[0].previewURL+"')";
+  document.getElementById("bg-container2").style.backgroundImage = "url('"+imgApi.hits[0].largeImageURL+"')";
 
   // add Location to title
   document.getElementById("destinationTitle").textContent += travelInfo.destination;
