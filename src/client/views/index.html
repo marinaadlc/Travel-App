@@ -10,7 +10,6 @@
     <main>
       <div id="bg-container">
         <section class="general-container">
-          <img src="./client/img/return.svg" alt="Return Icon">
           <h1 id="main-title">Bravo</h1>
           <h2 >Plan your travel.</h2>
           <form id="travelForm"class="travelForm" onsubmit="return Client.storeInfo(event)">
@@ -35,12 +34,12 @@
         <section class="general-container2">
           <h2 id="destinationTitle">Weather in </h2>
           <div id="weathers-container">
-          <button onClick="window.location.reload();" id="returnButton">
-            Return
-            <!-- <img src="./img/return.svg" alt="Return Icon"> -->
-          </button>
           </div>
         </section>
+        <button onClick="window.location.reload();" id="returnButton">
+          <p id="returnText">Return</p>
+          <img src="../img/return.png" alt="Return Icon" id="returnIcon">
+        </button>
       </div>
     </main>
   </body>

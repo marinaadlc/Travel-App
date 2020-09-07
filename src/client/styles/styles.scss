@@ -133,9 +133,22 @@ h2{
               font-size: 2rem;
               }
         #returnButton{
-          bottom: 10px;
+          align-items: center;
+          background-color: transparent;
+          border: solid 2px white;
+          border-radius: 10px;
+          bottom: 30px;
           color:white;
           display:flex;
+          font-size: 1.1rem;
           position: absolute;
-          right:10px;
+          right:70px;
         }
+          #returnText{
+            margin-left:10px;
+          }
+          #returnIcon{
+            height:30px;
+            margin-left: 10px;
+            margin-right: 10px;
+          }

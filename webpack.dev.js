@@ -23,9 +23,23 @@ module.exports={
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-           test: /\.(png|svg|jpg|gif)$/,
-           loader: "file-loader"
-       }
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+              {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+                outputPath: 'images/'
+                }
+              }
+            ]
+      },
+      {
+        test:/\.html$/,
+        use: [
+          'html-loader'
+        ]
+      }
     ]
   },
   plugins: [
