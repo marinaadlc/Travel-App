@@ -13,12 +13,15 @@ h1{
 }
 h2{
   color:white;
-  font-size: 1.8em;;
+  font-size: 1.8em;
   margin:0;
   margin-top: -10px;
 }
+.hidden{
+  display:none;
+}
 
-.bg-container{
+#bg-container{
   height: 100vh;
   padding:0;
   background-image: url("../img/plane-background.jpg");
@@ -101,6 +104,7 @@ h2{
         height:100vh;
         justify-content: center;
         margin:0 10vw;
+        position:relative;
       }
         #weathers-container{
           display: flex;
@@ -128,35 +132,10 @@ h2{
               color:#242424;
               font-size: 2rem;
               }
-
-
-
-      /* //------------------ */
-    .travelInfoBox{
-      background-color: #ffe3e6;
-      display:flex;
-      flex-wrap: flex;
-      height:80vh;
-    }
-      .infoBox{
-        display:flex;
-        flex-flow: wrap;
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px;
-        width:50%;
-      }
-        .destinationImg{
-          min-width:250px;
-          min-height:175px;
-          width:35vw;
-          height:25vw;
-          background:grey;
-          background-size: cover;
-        }
-
-        .dateInfoBox{
+        #returnButton{
+          bottom: 10px;
+          color:white;
           display:flex;
-          flex-flow: wrap;
-
+          position: absolute;
+          right:10px;
         }

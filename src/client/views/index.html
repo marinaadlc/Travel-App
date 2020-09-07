@@ -8,8 +8,9 @@
   </head>
   <body>
     <main>
-      <div class="bg-container">
+      <div id="bg-container">
         <section class="general-container">
+          <img src="./client/img/return.svg" alt="Return Icon">
           <h1 id="main-title">Bravo</h1>
           <h2 >Plan your travel.</h2>
           <form id="travelForm"class="travelForm" onsubmit="return Client.storeInfo(event)">
@@ -30,24 +31,16 @@
         </section>
       </div>
 
-      <div id="bg-container2"> <!--Display flex, center con max width, HIDDEN-->
+      <div id="bg-container2" class="hidden"> <!--Display flex, center con max width, HIDDEN-->
         <section class="general-container2">
           <h2 id="destinationTitle">Weather in </h2>
           <div id="weathers-container">
+          <button onClick="window.location.reload();" id="returnButton">
+            Return
+            <!-- <img src="./img/return.svg" alt="Return Icon"> -->
+          </button>
           </div>
         </section>
-      </div>
-
-      <!-- .................................................... -->
-      <div id="travelInfoBox"class="travelInfoBox hidden">
-        <div class="infoBox">
-          <h2 id="destinationTitle">Your destination: </h2>
-          <div id="destinationImg"class="destinationImg"></div>
-        </div>
-        <div class="infoBox">
-          <div id="dateInfoBox" class="dateInfoBox">
-          </div>
-        </div>
       </div>
     </main>
   </body>

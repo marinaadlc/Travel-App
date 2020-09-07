@@ -108,8 +108,8 @@ async function getAll(travelInfo){
   document.getElementById("destinationTitle").textContent += travelInfo.destination;
 
   // show all changes
-  document.getElementById("travelForm").classList.add("hidden");
-  document.getElementById("travelInfoBox").classList.remove("hidden");
+  document.getElementById("bg-container").classList.add("hidden");
+  document.getElementById("bg-container2").classList.remove("hidden");
 }
 
 export{
