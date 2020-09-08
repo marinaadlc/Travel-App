@@ -30,15 +30,14 @@ h2{
   .general-container{
     display:flex;
     flex-direction: column;
-    height:100%;
+    height:100vh;
     justify-content: flex-end;
     margin:0 10vw;
-    position:relative;
   }
       #travelForm{
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
         font-weight: bold;
+        grid-template-columns:0.8fr 1fr 1fr 1fr;
         height: 10vh;
         margin:0;
         margin-top: 25vh;
@@ -52,20 +51,13 @@ h2{
           opacity: 0.6;
           padding:10px 20px 0 20px;
         }
-        #dest{
-          flex:0.7;
-        }
-        #dep{
-          flex:1;
+          .destIn{
+            width:100%;
           }
-        #ret{
-          flex:1;
-        }
         #search-button{
             background-color:#00A271;
             color:white;
             display: flex;
-            flex:1;
             font-weight: bold;
             height:100%;
             justify-content: center;
@@ -89,6 +81,45 @@ h2{
             font-weight: bold;
             overflow: hidden;
           }
+        @media (max-width: 850px) and (min-width: 650px){
+          #travelForm{
+            grid-template-columns: 0.8fr 1fr 1fr;
+            grid-template-rows: 10vh 8vh;
+            margin-bottom: 8vh;
+          }
+          #search-button{
+            grid-column-start: 1;
+            grid-column-end: 4;
+          }
+        }
+        @media (max-width: 650px){
+          .general-container{
+            align-items: center;
+            text-align: center;
+            justify-content:center;
+          }
+            #main-title{
+              font-size: 70px;
+            }
+            #second-title{
+              font-size: 25px;
+            }
+          #travelForm{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 0.7fr;
+            height:40vh;
+            margin-top:5vh;
+            margin-bottom: 0;
+          }
+          #travelForm div{
+            align-items: center;
+            padding-bottom: 1px;
+            padding-top: 10px;
+          }
+          input{
+            text-align: center;
+          }
+        }
 
     /* //------------------ */
     #bg-container2{

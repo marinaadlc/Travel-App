@@ -11,11 +11,11 @@
       <div id="bg-container">
         <section class="general-container">
           <h1 id="main-title">Bravo</h1>
-          <h2 >Plan your travel.</h2>
+          <h2 id="second-title">Plan your travel.</h2>
           <form id="travelForm"class="travelForm" onsubmit="return Client.storeInfo(event)">
             <div id="dest">
-              <label for="Destination ">Where<br/></label>
-              <input class="inputs" id="destination" type="text" name="Destination" placeholder="City" required>
+              <label for="Destination" class="destIn">Where<br/></label>
+              <input class="inputs destIn" id="destination" type="text" name="Destination" placeholder="City" required>
             </div>
             <div id="dep">
               <label for="departure">Departure<br/></label>
@@ -29,7 +29,6 @@
           </form>
         </section>
       </div>
-
       <div id="bg-container2" class="hidden"> <!--Display flex, center con max width, HIDDEN-->
         <section class="general-container2">
           <h2 id="destinationTitle">Weather in </h2>
